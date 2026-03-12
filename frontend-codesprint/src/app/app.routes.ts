@@ -8,18 +8,18 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landing',
     pathMatch: 'full'
-  },
-
-  {
-    path: 'home',
-    component: HomeComponent
   },
 
   {
     path: 'landing',
     component: Landing
+  },
+
+  {
+    path: 'home',
+    component: HomeComponent
   },
 
   {

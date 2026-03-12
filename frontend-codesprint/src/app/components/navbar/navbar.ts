@@ -30,6 +30,6 @@ export class NavbarComponent {
     { label: 'Agenda',   path: '/agenda',    icon: 'heroCalendarDays' },
     { label: 'Chat IA',  path: '/chat-ia',   icon: 'heroCpuChip' },
     { label: 'Mensajes', path: '/mensajes',  icon: 'heroChatBubbleLeftRight' },
-    { label: 'Perfil',   path: '/perfil',    icon: 'heroUser' },
+    { label: 'Perfil',   path: '/profile',    icon: 'heroUser' },
   ];
 }
