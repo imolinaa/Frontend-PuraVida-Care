@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router'; // Necesario para navegar
-import { Navbar } from '../components/navbar/navbar'; // Ajusta la ruta a tu Navbar
+import { NavbarComponent } from '../components/navbar/navbar'; // Ajusta la ruta a tu Navbar
 import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [Navbar, CommonModule], // Navbar y CommonModule (para el *ngIf y *ngFor)
+  imports: [NavbarComponent, CommonModule], // Navbar y CommonModule (para el *ngIf y *ngFor)
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })

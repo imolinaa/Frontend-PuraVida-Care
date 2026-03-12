@@ -3,12 +3,12 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { Router } from '@angular/router';
 import { ProfileService } from '../services/profile';
 import { CommonModule } from '@angular/common';
-import { Navbar } from '../components/navbar/navbar';
+import { NavbarComponent } from '../components/navbar/navbar';
 
 @Component({
   selector: 'app-profile-edit',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, Navbar],
+  imports: [ReactiveFormsModule, CommonModule, NavbarComponent],
   templateUrl: './profile-edit.html'
 })
 export class ProfileEdit implements OnInit {
