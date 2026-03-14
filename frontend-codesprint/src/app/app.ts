@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { LoginComponent } from './components/login/login.component';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [LoginComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
 export class App {
-  title = 'PuraVidaCare';
+  protected readonly title = signal('frontend-codesprint');
 }
