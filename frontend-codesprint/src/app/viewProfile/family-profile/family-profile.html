@@ -1,0 +1,91 @@
+<div class="min-h-screen bg-gray-50">
+    <app-navbar></app-navbar>
+  <main class="lg:ml-64 pb-24">
+    <div class="container mx-auto px-6 py-8 max-w-4xl">
+
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-6 border border-gray-100">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div class="w-24 h-24 rounded-full overflow-hidden bg-teal-50 flex items-center justify-center">
+            <img
+              *ngIf="profile?.profileImage"
+              [src]="profile.profileImage"
+              [alt]="profile.fullName"
+              class="w-full h-full object-cover"
+            />
+            <span *ngIf="!profile?.profileImage" class="text-teal-600 font-bold text-2xl">
+              {{ profile?.fullName?.charAt(0) }}
+            </span>
+          </div>
+
+          <div class="flex-1 text-center sm:text-left">
+            <h1 class="text-2xl font-bold text-gray-900 mb-1">{{ profile?.fullName }}</h1>
+            <p class="text-teal-600 font-medium text-sm">Cliente / Familiar</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 mb-6">
+        <h2 class="text-teal-600 font-bold mb-6 text-sm uppercase tracking-wider">
+          Información principal
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <p class="text-sm text-gray-500">Nombre completo</p>
+            <p class="font-semibold text-gray-900">{{ profile?.fullName }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-500">Teléfono</p>
+            <p class="font-semibold text-gray-900">{{ profile?.phone }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-500">Correo electrónico</p>
+            <p class="font-semibold text-gray-900">{{ profile?.email }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-500">Relación con el adulto mayor</p>
+            <p class="font-semibold text-gray-900">{{ profile?.relationToSenior }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 mb-6">
+        <h2 class="text-teal-600 font-bold mb-6 text-sm uppercase tracking-wider">
+          Contacto de emergencia
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div>
+            <p class="text-sm text-gray-500">Nombre</p>
+            <p class="font-semibold text-gray-900">{{ profile?.emergencyName }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-500">Relación</p>
+            <p class="font-semibold text-gray-900">{{ profile?.emergencyRelation }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-500">Teléfono</p>
+            <p class="font-semibold text-gray-900">{{ profile?.emergencyPhone }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        *ngIf="profile?.importantNotes"
+        class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100"
+      >
+        <h2 class="text-teal-600 font-bold mb-4 text-sm uppercase tracking-wider">
+          Notas importantes
+        </h2>
+
+        <p class="text-gray-700">{{ profile?.importantNotes }}</p>
+      </section>
+
+    </div>
+  </main>
+</div>
