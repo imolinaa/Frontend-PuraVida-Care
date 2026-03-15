@@ -1,0 +1,200 @@
+<div class="max-w-[1100px] mx-auto p-[30px] font-sans">
+
+  <!-- Navbar-->
+  <div class="w-64 bg-white shadow-md">
+    <app-navbar-provider></app-navbar-provider>
+  </div>
+
+  <!-- Header del dashboard -->
+  <div class="flex-1 p-8 bg-gray-50">
+    <div>
+      <h1 class="m-0 text-[26px] font-bold">Dashboard Proveedor</h1>
+      <p class="text-[#666] mt-1">Gestiona tus servicios y solicitudes</p>
+    </div>
+
+    <div class="bg-[#e7f7ed] border border-[#9fe3b3] p-[18px] rounded-xl mt-5">
+      <div class="flex items-center gap-2">
+        <lucide-icon [img]="Check" class="w-5 h-5 text-[#0a8f4b]"></lucide-icon>
+        <span class="font-bold text-[#0a8f4b]">Cuenta Verificada</span>
+      </div>
+      <p class="mt-1 text-sm">Tu cuenta está verificada y puedes recibir solicitudes de clientes.</p>
+    </div>
+
+
+  <!-- Estadísticas principales -->
+  <section class="mt-[30px]">
+    <div class="grid grid-cols-4 gap-5 mb-[30px]">
+
+      <div class="bg-white p-5 rounded-xl flex items-center gap-[15px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+        <div
+          class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-emerald-100 text-emerald-600 *:w-[22px] *:h-[22px]">
+          <lucide-icon [img]="FileText"></lucide-icon>
+        </div>
+        <div>
+          <h3 class="m-0 font-bold text-[22px]">8</h3>
+          <p class="m-0 text-[13px] text-gray-500">Servicios activos</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl flex items-center gap-[15px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+        <div
+          class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-orange-100 text-orange-600 *:w-[22px] *:h-[22px]">
+          <lucide-icon [img]="Inbox"></lucide-icon>
+        </div>
+        <div>
+          <h3 class="m-0 font-bold text-[22px]">3</h3>
+          <p class="m-0 text-[13px] text-gray-500">Solicitudes pendientes</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl flex items-center gap-[15px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+        <div
+          class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-emerald-100 text-emerald-600 *:w-[22px] *:h-[22px]">
+          <lucide-icon [img]="DollarSign"></lucide-icon>
+        </div>
+        <div>
+          <h3 class="m-0 font-bold text-[22px]">₡125 000</h3>
+          <p class="m-0 text-[13px] text-gray-500">Ganancias este mes</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl flex items-center gap-[15px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+        <div
+          class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-blue-100 text-blue-600 *:w-[22px] *:h-[22px]">
+          <lucide-icon [img]="BarChart"></lucide-icon>
+        </div>
+        <div>
+          <h3 class="m-0 font-bold text-[22px]">127</h3>
+          <p class="m-0 text-[13px] text-gray-500">Servicios completados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acciones rápidas -->
+  <section class="mt-[30px]">
+    <div class="mb-[30px]">
+
+      <h2 class="text-xl font-bold mb-4">Accesos rápidos</h2>
+
+      <div class="grid grid-cols-3 gap-5">
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-emerald-100 text-emerald-600 *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="Plus"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Crear servicio</h4>
+          <p class="mt-1 text-[13px] text-gray-500">Publicar nueva oferta</p>
+        </div>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-blue-100 text-blue-600 *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="FileText"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Mis servicios</h4>
+          <p class="mt-1 text-[13px] text-gray-500">Ver y editar servicios</p>
+        </div>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-violet-100 text-violet-600 *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="Calendar"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Disponibilidad</h4>
+          <p class="mt-1 text-[13px] text-gray-500">Gestionar calendario</p>
+        </div>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-orange-100 text-orange-600 *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="Inbox"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Solicitudes</h4>
+          <p class="mt-1 text-[13px] text-gray-500">3 pendientes</p>
+        </div>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-[rgba(241,203,240,0.86)] text-[#c823c0] *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="User"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Perfil público</h4>
+          <p class="mt-1 text-[13px] text-gray-500">Ver como cliente</p>
+        </div>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+          <div
+            class="w-11 h-11 flex items-center justify-center rounded-[10px] mb-[10px] bg-gray-100 text-gray-700 *:w-[22px] *:h-[22px]">
+            <lucide-icon [img]="MessageCircle"></lucide-icon>
+          </div>
+          <h4 class="m-0 font-semibold">Mensajes</h4>
+          <p class="mt-1 text-[13px] text-gray-500">Ver mensajes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actividad reciente -->
+  <section class="mt-[30px]">
+    <div>
+
+      <h2 class="text-xl font-bold mb-4">Actividad reciente</h2>
+
+      <div class="bg-white rounded-xl p-[10px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+
+        <div class="flex justify-between items-center p-[15px] border-b border-[#eee]">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 flex items-center justify-center rounded-lg bg-orange-100 text-orange-600 *:w-[18px] *:h-[18px]">
+              <lucide-icon [img]="Clock"></lucide-icon>
+            </div>
+            <div>
+              <strong class="font-semibold">Nueva solicitud de servicio</strong>
+              <p class="mt-[2px] text-[13px] text-gray-500">Transporte + Acompañamiento</p>
+            </div>
+          </div>
+          <span class="text-xs text-gray-400">Hace 2 horas</span>
+        </div>
+
+        <div class="flex justify-between items-center p-[15px] border-b border-[#eee]">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 flex items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 *:w-[18px] *:h-[18px]">
+              <lucide-icon [img]="Clock"></lucide-icon>
+            </div>
+            <div>
+              <strong class="font-semibold">Servicio completado</strong>
+              <p class="mt-[2px] text-[13px] text-gray-500">Calificación recibida: 5 estrellas</p>
+            </div>
+          </div>
+          <span class="text-xs text-gray-400">Hace 5 horas</span>
+        </div>
+
+        <div class="flex justify-between items-center p-[15px]">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600 *:w-[18px] *:h-[18px]">
+              <lucide-icon [img]="Clock"></lucide-icon>
+            </div>
+            <div>
+              <strong class="font-semibold">Pago recibido</strong>
+              <p class="mt-[2px] text-[13px] text-gray-500">₡46,612 depositado</p>
+            </div>
+          </div>
+          <span class="text-xs text-gray-400">Ayer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+
